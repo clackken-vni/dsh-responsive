@@ -1,0 +1,47 @@
+{
+  "name": "dsh-responsive",
+  "version": "0.1.0",
+  "description": "Responsive optimization for DeepSeek Harness web UI on mobile/tablet: single-column layout, larger touch targets, safe-area insets, and legibility tuning auto-applied on narrow viewports.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "responsive",
+    "mobile",
+    "ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/react": "~18.3.1",
+    "react": "^18.2.0"
+  }
+}
