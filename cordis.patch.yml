@@ -1,10 +1,4 @@
-# dsh-responsive bundle patch: mounts the responsive web-UI optimization into
-# the host composition of a dsh profile. The host half is a no-op (metadata
-# only); all behavior lives in the web client (this package's `./client` entry),
-# which injects responsive CSS for narrow viewports (mobile/tablet) and keeps the
-# desktop layout untouched.
-#
-# Install: `dsh plugin --profile <name> add github:clackken-vni/dsh-responsive`
-# then restart `dsh web`.
-- id: responsive
-  name: dsh-responsive
+# dsh-responsive bundle patch
+- insert:
+    - id: responsive
+      name: dsh-responsive
