@@ -6,5 +6,6 @@
 #
 # Install: `dsh plugin --profile <name> add github:clackken-vni/dsh-responsive`
 # then restart `dsh web`.
-- id: responsive
-  name: dsh-responsive
+- insert:
+    - id: responsive
+      name: dsh-responsive
