@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "description": "Responsive optimization for DeepSeek Harness web UI on mobile/tablet: single-column layout, larger touch targets, safe-area insets, and legibility tuning auto-applied on narrow viewports.",
   "type": "module",
-  "main": "./lib/index.js",
+  "main": "lib/index.js",
   "exports": {
-    ".": "./lib/index.js",
-    "./client": "./lib/client.js",
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
     "./cordis.patch.yml": "./cordis.patch.yml",
     "./package.json": "./package.json"
   },
